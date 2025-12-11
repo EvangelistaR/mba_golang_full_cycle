@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Courses</title>
+  </head>
+
+  <body>
+    <h1>Courses Available</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Course</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {{ if . }}
+          {{ range . }}
+            <tr>
+              <td>{{ .Name }}</td>
+              <td>{{ .Time }}</td>
+            </tr>
+          {{end}}
+        {{ else }}
+            <tr>
+              <td colspan="2">No courses to be displayed</td>
+            </tr>
+        {{end}}
+      </tbody>
+    </table>
+  </body>
+</html>
