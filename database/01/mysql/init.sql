@@ -1,0 +1,10 @@
+CREATE DATABASE IF NOT EXISTS goexpert;
+
+USE goexpert;
+
+CREATE TABLE IF NOT EXISTS products (
+    id VARCHAR(36) NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    price DECIMAL(10,2) NOT NULL,
+    PRIMARY KEY (id)
+);
